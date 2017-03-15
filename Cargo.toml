@@ -1,0 +1,7 @@
+[package]
+name = "monoplay"
+version = "0.1.0"
+authors = ["Filip Szczepański <jazz2rulez@gmail.com>"]
+
+[dependencies]
+rodio = "0.4.2"
