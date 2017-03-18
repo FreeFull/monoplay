@@ -5,3 +5,4 @@ authors = ["Filip Szczepański <jazz2rulez@gmail.com>"]
 
 [dependencies]
 rodio = "0.4.2"
+nom = "2.1.0"
