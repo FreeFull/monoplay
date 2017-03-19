@@ -3,12 +3,16 @@ extern crate nom;
 
 mod moduledata;
 mod replayer;
+mod constants;
 
 use moduledata::ModuleData;
 use replayer::Replayer;
 
+use std::env;
+
 fn main() {
-    let module = ModuleData::load("prelude.mon").unwrap();
+    let path = env::args().nth(1).expect("Please provide the filename as an argument.");
+    let module = ModuleData::load(&path).unwrap();
     let replayer = Replayer::new(module);
 
     let endpoint = rodio::get_default_endpoint().expect("Unable to open audio device.");
